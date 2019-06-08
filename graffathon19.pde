@@ -47,7 +47,7 @@ Moonlander moonlander;
  */
 void settings() {
   // Set up the drawing area size and renderer (P2D / P3D).
-  size(width, height, P2D);
+  size(1980, 1080, P2D);
 }
 
 void setup() {
@@ -89,6 +89,7 @@ void draw() {
 
   if (scene==0) {  //start/end
     drawNoisyMountains();
+    drawTitle(0, 64);
   }
   if (scene==1) {
     drawEllipse();
@@ -119,9 +120,10 @@ void draw() {
   }
 
   if (scene==98) { // 2019
-
+      drawMusicCredits(0, 32);
   }
   if (scene==100) {  //exit
+    drawEndText(0 , 32);
   }
 }
 
@@ -313,34 +315,34 @@ void branch(float h){
     popMatrix();
   }
 }
- 
- void drawtext(){
-  textSize(32);
-  textAlign(CENTER);
-  drawType(width * 0.5); 
-}
 
-void drawType(float x) {
-
-  fill(100);
-  text("MUSIC CREDITS:", x, height/4);
-  fill(175);
-  text("Vadora Chill Mix, Kevin MacLeod", x, height/3);
-  fill(200);
-  text("(incompetech.com), Licensed under Creative Commons: By Attribution 3.0 License", x, height/2.2);
-  fill(200);
-  text("http://creativecommons.org/licenses/by/3.0/", x, height/1.9);
-  
-
-}
- 
-void drawendtext(){
+void drawTitle(float x, int fontSize){
   textAlign(CENTER); 
-  textSize(32);
+  textSize(fontSize);
   fill(100);
-  text("GRAFFATHON 2018:", width/2, 350); 
-  fill(255);
-  text("by vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", width/2, 450);
+  text("MANDOLOID", x, 0); 
+}
+
+void drawMusicCredits(float x, int fontSize) {
+  textSize(fontSize);
+  textAlign(CENTER);
+  fill(100);
+  text("MUSIC CREDITS:", x, -height/10);
+  fill(175);
+  text("Vadora Chill Mix, Kevin MacLeod", x, 0);
+  fill(200);
+  text("(incompetech.com), Licensed under Creative Commons: By Attribution 3.0 License", x, height/10);
+  fill(200);
+  text("http://creativecommons.org/licenses/by/3.0/", x, height/6);
+}
+ 
+void drawEndText(float x, int fontSize){
+  textAlign(CENTER); 
+  textSize(fontSize);
+  fill(100);
+  text("GRAFFATHON 2019", x, -height/10); 
+  fill(175);
+  text("Team vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", x, 0);
 
  } 
 
