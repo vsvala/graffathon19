@@ -71,6 +71,8 @@ void draw() {
 
   int scene=moonlander.getIntValue("scene");
   int updatebackground=moonlander.getIntValue("updatebackground");
+  int start = moonlander.getIntValue("start");
+  int end = moonlander.getIntValue("end");
   
   if (updatebackground != 0) {
     if (updatebackground == 1) {
@@ -95,7 +97,9 @@ void draw() {
   if (scene==4) {
     drawNoisyMountains();
   }
-
+   if (scene==6) {
+    drawBezier(start, end);
+  }
   if (scene==98) { // 2019
   }
 
@@ -253,11 +257,9 @@ void drawApndxWave2() {
    
 
 
-void drawBezier() {
+void drawBezier(int start, int end) {
   drawCircle();
   drawLittleCircle();
-  int start = moonlander.getIntValue("start");
-  int end = moonlander.getIntValue("end");
   background(255);
   stroke(0);
    noFill();
@@ -265,4 +267,3 @@ void drawBezier() {
       bezier(start-(i/2.0), 40+i, 410, 20, 440, 300, end, 300+(i/8.0));
   }
 }
-
