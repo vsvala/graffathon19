@@ -19,7 +19,7 @@ int treeCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
-float amplitude = height*2;
+float amplitude = height*6;
 float period = 500.0;
 float dx;
 float[] yvalues;
@@ -98,11 +98,11 @@ void draw() {
     renderWave();
   }
   if (scene==3) {
-    drawFlower();
+    drawFlower(true);
   }
   if (scene==4) {
     drawNoisyMountains();
-    drawFlower();
+    drawFlower(false);
   }
    if (scene==6) {
     drawBezier(start, end);
@@ -124,8 +124,10 @@ void draw() {
   if (scene==100) {  //exit
     drawEndText(0 , 32);
   }
+  if (scene==666) {
+    exit();
+  }
 }
-
 
 void drawEllipse() {
   stroke(0, 90);
@@ -150,9 +152,14 @@ void drawNoisyMountains() {
   }
 }
 
-void drawFlower() {
+void drawFlower(boolean changeColor) {
   noFill();
-  stroke(0, 0, 0, 40);
+  if (changeColor == true) {
+    stroke(map(flowerCounter, 0, 500, 0, 75), 0, 0, 40);
+  } else {
+    stroke(0, 0, 0, 40);
+  }
+  
   float t=(float) flowerCounter;      
   rotate(t/70);
   ellipse(sin(t/100)*width/2, cos(t/100)*width/2, sin(t/100)*width/2, cos(t/100)*width/2);
@@ -245,20 +252,19 @@ void drawApndxWave2() {
     drawCircle();
     drawLittleCircle();
     drawMandala1();
-
-
    }
+
    void drawCircle(){ 
    stroke(0,0);
    fill(100, 0,0,1);
-  ellipse(width/2*0.90, -height/2 * 0.5, width/6, width/6);
+  ellipse(width/3*0.90, -height/3 * 0.5, width/12, width/12);
 
    }
      
   void drawLittleCircle(){ 
   stroke(0,0);
   fill(100, 0,0,1);
-  ellipse(-width/2*0.9, -height/2 * 0.3, width/22, width/22);
+  ellipse(-width/3*0.9, -height/3 * 0.3, width/33, width/33);
 
    }
   
@@ -270,7 +276,7 @@ void drawApndxWave2() {
   
   // translate(-width/2, -height/2); 
    rotate(t/-width/2);    
-  line(sin(t/140)*width/3, cos(t/140)*width/3, cos(t/10)*width/1.75, sin(t/10)*width/1.75);
+  line(sin(t/140)*width/5, cos(t/140)*width/5, cos(t/10)*width/3, sin(t/10)*width/3);
   fill(175);
   mandalaCounter++;
    }
@@ -290,8 +296,9 @@ void drawBezier(int start, int end) {
 
 void tree(){
     stroke(0);
-    line(0, height ,0,0);
-    branch(height/1.5);
+    line(0, height, 0, height * 0.175);
+    translate(0, height * 0.175);
+    branch(height/3);
     theta = radians(map(millis(), 0, 10000, 0, 90));
     treeCounter++;
 }
@@ -342,9 +349,4 @@ void drawEndText(float x, int fontSize){
   text("GRAFFATHON 2019", x, -height/10); 
   fill(175);
   text("Team vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", x, 0);
-
  } 
-
-void drawexit(){
-exit();
-}

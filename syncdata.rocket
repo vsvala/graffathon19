@@ -1,49 +1,50 @@
 <sync rows="700">
 	<tracks>
 		<track name="scene">
-			<key value="0" row="0" interpolation="0"/>
-			<key value="4" row="17" interpolation="0"/>
-			<key value="3" row="64" interpolation="0"/>
-			<key value="2" row="96" interpolation="0"/>
-			<key value="7" row="120" interpolation="0"/>
-			<key value="8" row="168" interpolation="0"/>
-			<key value="3" row="240" interpolation="0"/>
-			<key value="98" row="320" interpolation="0"/>
-			<key value="100" row="328" interpolation="0"/>
+			<key value="0" interpolation="0" row="0"/>
+			<key value="4" interpolation="0" row="17"/>
+			<key value="3" interpolation="0" row="64"/>
+			<key value="2" interpolation="0" row="96"/>
+			<key value="7" interpolation="0" row="120"/>
+			<key value="8" interpolation="0" row="168"/>
+			<key value="3" interpolation="0" row="240"/>
+			<key value="98" interpolation="0" row="320"/>
+			<key value="100" interpolation="0" row="328"/>
+			<key value="666" interpolation="0" row="344"/>
 		</track>
 		<track name="updatebackground">
-			<key value="-1" row="0" interpolation="0"/>
-			<key value="-1" row="16" interpolation="0"/>
-			<key value="0" row="18" interpolation="0"/>
-			<key value="0" row="96" interpolation="0"/>
-			<key value="-1" row="120" interpolation="0"/>
-			<key value="0" row="121" interpolation="0"/>
-			<key value="-1" row="168" interpolation="0"/>
-			<key value="-1" row="240" interpolation="0"/>
-			<key value="0" row="241" interpolation="0"/>
-			<key value="-1" row="319" interpolation="0"/>
+			<key value="-1" interpolation="0" row="0"/>
+			<key value="-1" interpolation="0" row="16"/>
+			<key value="0" interpolation="0" row="18"/>
+			<key value="0" interpolation="0" row="96"/>
+			<key value="-1" interpolation="0" row="120"/>
+			<key value="0" interpolation="0" row="121"/>
+			<key value="-1" interpolation="0" row="168"/>
+			<key value="-1" interpolation="0" row="240"/>
+			<key value="0" interpolation="0" row="241"/>
+			<key value="-1" interpolation="0" row="319"/>
 		</track>
 		<track name="time">
-			<key value="0" row="0" interpolation="2"/>
-			<key value="80" row="88" interpolation="2"/>
-			<key value="320" row="129" interpolation="0"/>
-			<key value="240" row="264" interpolation="2"/>
+			<key value="0" interpolation="2" row="0"/>
+			<key value="80" interpolation="2" row="88"/>
+			<key value="320" interpolation="0" row="129"/>
+			<key value="240" interpolation="2" row="264"/>
 		</track>
 		<track name="start"/>
 		<track name="end"/>
 		<track name="C_x">
-			<key value="1" row="123" interpolation="0"/>
-			<key value="0.77" row="131" interpolation="0"/>
-			<key value="0.5" row="139" interpolation="0"/>
-			<key value="-0.33" row="147" interpolation="0"/>
-			<key value="-0.75" row="155" interpolation="0"/>
+			<key value="1" interpolation="0" row="123"/>
+			<key value="0.77" interpolation="0" row="131"/>
+			<key value="0.5" interpolation="0" row="139"/>
+			<key value="-0.33" interpolation="0" row="147"/>
+			<key value="-0.75" interpolation="0" row="155"/>
 		</track>
 		<track name="C_y">
-			<key value="1" row="123" interpolation="0"/>
-			<key value="-0.5" row="131" interpolation="0"/>
-			<key value="0.5" row="139" interpolation="0"/>
-			<key value="-0.33" row="147" interpolation="0"/>
-			<key value="0.5" row="155" interpolation="0"/>
+			<key value="1" interpolation="0" row="123"/>
+			<key value="-0.5" interpolation="0" row="131"/>
+			<key value="0.5" interpolation="0" row="139"/>
+			<key value="-0.33" interpolation="0" row="147"/>
+			<key value="0.5" interpolation="0" row="155"/>
 		</track>
 	</tracks>
 	<bookmarks/>
