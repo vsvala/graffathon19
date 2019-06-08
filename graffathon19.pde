@@ -111,6 +111,19 @@ void drawNoisyMountains() {
     float y = map(noiseValue, 0, 1, 0, height);
     rect(x, y, 1, height);
   }
+ 
+  void drawFlower(){
+  void draw(){
+  noFill();
+  stroke(0,40);
+  float t=(float)frameCount;
+  
+  translate(width/2, height/2);                 
+  rotate(t/113);
+              ellipse(sin(t/100)*200, cos(t/100)*200,sin(t/100)*200, cos(t/100)*200);
+            
+}
+
 void calcWave(){
     theta += 0.02;
     float x = theta;
