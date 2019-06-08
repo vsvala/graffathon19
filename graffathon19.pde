@@ -22,7 +22,7 @@ int flowerCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
-float amplitude = 75.0;
+float amplitude = 112;
 float period = 500.0;
 float dx;
 float[] yvalues;
@@ -133,7 +133,7 @@ void drawFlower() {
     float t=(float) flowerCounter;
 
     translate(width/2, height/2);                 
-    rotate(t/113);
+    rotate(t/70);
     ellipse(sin(t/100)*width/2, cos(t/100)*width/2, sin(t/100)*width/2, cos(t/100)*width/2);
     ellipse(sin(t/100)*width/3, cos(t/100)*width/3, sin(t/100)*width/3, cos(t/100)*width/3);
     ellipse(sin(t/100)*width/5, cos(t/100)*width/5, sin(t/100)*width/5, cos(t/100)*width/5);
