@@ -153,17 +153,18 @@ void drawFlower() {
   void renderWave() {
     noStroke();
     fill(255);
-
-    for (int x = 0; x < yvalues.length; x++) {
-      ellipse(x*xspacing, height/2+yvalues[x], 16, 16);
+    int xBegin = -width/2;
+    for (int x = xBegin; x < yvalues.length; x++) {
+      ellipse(x*xspacing, yvalues[x], 16, 16);
     }
   }
 
   void renderLine() {
     stroke(255);
     strokeWeight(16.0);
-    for (int x = 0; x < yvalues.length; x++) {
-      line(x*xspacing, height/2+yvalues[x], x*xspacing, height/2+yvalues[x]-x);
+    int xBegin = -width/2;
+    for (int x = xBegin; x < yvalues.length; x++) {
+      line(x*xspacing, yvalues[x], x*xspacing, yvalues[x]-x);
     }
   }
   void calcApndxWave1() {
