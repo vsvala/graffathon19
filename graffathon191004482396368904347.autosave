@@ -12,8 +12,8 @@ import moonlander.library.*;
 // full HD resolution (1920x1080).
 
 
-int width = 1280;
-int height = 760;
+int width = 680;
+int height = 360;
 
 
 int ellipseCounter = 0;
@@ -22,7 +22,7 @@ int flowerCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
-float amplitude = height*0.85;
+float amplitude = height*0.62;
 float period = 500.0;
 float dx;
 float[] yvalues;
@@ -215,18 +215,5 @@ void drawApndxWave2() {
   // A simple way to draw the wave with an ellipse at each location
   for (int x = 0; x < apndx_yvalues.length; x++) {
     rect(x*apndx_xspacing, height/2+apndx_yvalues[x], 5, 15);
-  }
-}
-
-void drawBezier() {
-  drawCircle();
-  drawLittleCircle();
-  int start = moonlander.getIntValue("start");
-  int end = moonlander.getIntValue("end");
-  background(255);
-  stroke(0);
-   noFill();
-  for (int i = 0; i < 200; i += 20) {
-      bezier(start-(i/2.0), 40+i, 410, 20, 440, 300, end, 300+(i/8.0));
   }
 }
