@@ -13,6 +13,14 @@ import moonlander.library.*;
 int C_WIDTH = 500;
 int C_HEIGHT = 500;
 int ellipseCounter = 0;
+//sin wave draw function helper variables
+float theta = 0.0;
+ float amplitude = 75.0;
+ float period = 500.0;
+ float dx;
+ float[] yvalues;
+ int w;
+ int xspacing = 16;
 
 Moonlander moonlander;
 
@@ -28,6 +36,10 @@ void settings() {
 void setup() {
   noCursor();
   frameRate(60);
+  //set variables for sin wave draw function
+  w = width + 16;
+  dx = (TWO_PI / period) * xspacing;
+  yvalues = new float[w/xspacing];
 
   // Parameters: 
   // - PApplet
@@ -99,8 +111,7 @@ void drawNoisyMountains() {
     float y = map(noiseValue, 0, 1, 0, height);
     rect(x, y, 1, height);
   }
-  
-  
+ 
   void drawFlower(){
   void draw(){
   noFill();
@@ -112,5 +123,30 @@ void drawNoisyMountains() {
               ellipse(sin(t/100)*200, cos(t/100)*200,sin(t/100)*200, cos(t/100)*200);
             
 }
-  
+
+void calcWave(){
+    theta += 0.02;
+    float x = theta;
+    for(int i = 0; i < yvalues.length; i++){
+      yvalues[i] = sin(x)*amplitude;
+      x += dx;
+    }
   }
+
+void renderWave(){
+  noStroke();
+  fill(255);
+  
+  for(int x = 0; x < yvalues.length; x++){
+    ellipse(x*xspacing, height/2+yvalues[x],16,16);
+    
+  }
+}
+
+void renderLine(){
+  stroke(255);
+  strokeWeight(16.0);
+  for(int x = 0; x < yvalues.length; x++){
+    line(x*xspacing, height/2+yvalues[x], x*xspacing, height/2+yvalues[x]-x);
+}
+}
