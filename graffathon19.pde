@@ -40,7 +40,6 @@ void setup() {
   // connects to Rocket (development mode) or loads data 
   // from 'syncdata.rocket' (player mode).
   // Also, in player mode the music playback starts immediately.
-  stroke(0, 40);
   background(255, 255, 255);
   moonlander.start();
 }
@@ -78,6 +77,7 @@ void draw() {
 
 
 void drawEllipse() {
+  stroke(0, 40);
   translate(C_WIDTH/2, C_HEIGHT/2);
 
   //float x = (float) moonlander.getValue("cir_x") * C_WIDTH / 2;
