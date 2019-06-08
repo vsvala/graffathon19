@@ -281,11 +281,11 @@ void drawBezier(int start, int end) {
 }
 
 void tree(){
-    translate(width, height*2);
+    translate(width/2, height);
     stroke(0);
-    line(0,0,0,-120);
-    translate(0,-120);
-    branch(120);
+    line(0,0,0,-height/3);
+    translate(0,-height/3);
+    branch(height/3);
     theta = radians(map(millis(), 0, 10000, 0, 90));
     
 }
