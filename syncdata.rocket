@@ -4,42 +4,38 @@
 			<key value="0" row="0" interpolation="0"/>
 			<key value="4" row="16" interpolation="0"/>
 			<key value="3" row="64" interpolation="0"/>
-			<key value="2" row="152" interpolation="0"/>
-			<key value="4" row="169" interpolation="0"/>
-			<key value="8" row="343" interpolation="0"/>
-			<key value="8" row="344" interpolation="0"/>
+			<key value="2" row="96" interpolation="0"/>
+			<key value="8" row="120" interpolation="0"/>
+			<key value="8" row="121" interpolation="0"/>
 		</track>
 		<track name="updatebackground">
 			<key value="-1" row="0" interpolation="0"/>
 			<key value="0" row="1" interpolation="0"/>
-			<key value="0" row="152" interpolation="0"/>
-			<key value="0" row="167" interpolation="0"/>
-			<key value="0" row="169" interpolation="0"/>
-			<key value="-1" row="343" interpolation="0"/>
-			<key value="0" row="344" interpolation="0"/>
+			<key value="0" row="96" interpolation="0"/>
+			<key value="-1" row="120" interpolation="0"/>
+			<key value="0" row="121" interpolation="0"/>
 		</track>
 		<track name="time">
 			<key value="0" row="0" interpolation="2"/>
 			<key value="80" row="88" interpolation="2"/>
-			<key value="160" row="176" interpolation="0"/>
+			<key value="320" row="129" interpolation="0"/>
 			<key value="240" row="264" interpolation="2"/>
-			<key value="320" row="352" interpolation="0"/>
 		</track>
 		<track name="start"/>
 		<track name="end"/>
 		<track name="C_x">
-			<key value="1" row="346" interpolation="0"/>
-			<key value="0.77" row="354" interpolation="0"/>
-			<key value="0.5" row="362" interpolation="0"/>
-			<key value="-0.33" row="370" interpolation="0"/>
-			<key value="-0.75" row="378" interpolation="0"/>
+			<key value="1" row="123" interpolation="0"/>
+			<key value="0.77" row="131" interpolation="0"/>
+			<key value="0.5" row="139" interpolation="0"/>
+			<key value="-0.33" row="147" interpolation="0"/>
+			<key value="-0.75" row="155" interpolation="0"/>
 		</track>
 		<track name="C_y">
-			<key value="1" row="346" interpolation="0"/>
-			<key value="-0.5" row="354" interpolation="0"/>
-			<key value="0.5" row="362" interpolation="0"/>
-			<key value="-0.33" row="370" interpolation="0"/>
-			<key value="0.5" row="378" interpolation="0"/>
+			<key value="1" row="123" interpolation="0"/>
+			<key value="-0.5" row="131" interpolation="0"/>
+			<key value="0.5" row="139" interpolation="0"/>
+			<key value="-0.33" row="147" interpolation="0"/>
+			<key value="0.5" row="155" interpolation="0"/>
 		</track>
 	</tracks>
 	<bookmarks/>
