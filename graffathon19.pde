@@ -218,6 +218,41 @@ void drawApndxWave2() {
   }
 }
 
+  void drawMand(){
+    drawCircle();
+    drawLittleCircle();
+    drawMandala1();
+
+
+   }
+   void drawCircle(){ 
+   stroke(0,0);
+   fill(100, 0,0,1);
+  ellipse(width/2+250, height/2 +50, 150, 150);
+
+   }
+     
+  void drawLittleCircle(){ 
+  stroke(0,0);
+  fill(100, 0,0,1);
+  ellipse(width/2-350, height/2 -125, 25, 25);
+
+   }
+  
+  void drawMandala1(){
+  noFill();
+  stroke(0,40);
+  frameRate(1000);
+  float t=(float)frameCount;
+  
+  translate(width/2, height/2); 
+   rotate(t/width/2);    
+  line(sin(t/140)*200, cos(t/140)*200, cos(t/10)*300, sin(t/10)*300);
+  fill(175);
+   }
+   
+
+
 void drawBezier() {
   drawCircle();
   drawLittleCircle();
@@ -230,3 +265,4 @@ void drawBezier() {
       bezier(start-(i/2.0), 40+i, 410, 20, 440, 300, end, 300+(i/8.0));
   }
 }
+
