@@ -1,21 +1,6 @@
 <sync rows="128">
 	<tracks>
-		<track name="cir_x">
-			<key interpolation="1" row="0" value="0"/>
-			<key interpolation="1" row="8" value="1"/>
-			<key interpolation="1" row="16" value="-1"/>
-			<key interpolation="1" row="24" value="-0.5"/>
-			<key interpolation="1" row="32" value="-1"/>
-			<key interpolation="0" row="40" value="1"/>
-		</track>
-		<track name="cir_y">
-			<key interpolation="2" row="0" value="0"/>
-			<key interpolation="2" row="8" value="0.5"/>
-			<key interpolation="2" row="16" value="-0.5"/>
-			<key interpolation="1" row="24" value="1"/>
-			<key interpolation="1" row="32" value="-1"/>
-			<key interpolation="0" row="40" value="1"/>
-		</track>
+		<track name="scene"/>
 	</tracks>
 	<bookmarks/>
 </sync>
