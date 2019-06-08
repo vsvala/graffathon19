@@ -119,7 +119,7 @@ void drawNoisyMountains() {
 
 void drawFlower() {
   noFill();
-  stroke(0, 0, 0);
+  stroke(0, 0, 0, 20);
   float t=(float) flowerCounter;                 
   rotate(t/70);
   ellipse(sin(t/100)*width/2, cos(t/100)*width/2, sin(t/100)*width/2, cos(t/100)*width/2);
@@ -138,39 +138,21 @@ void calcWave() {
   }
 }
 
-<<<<<<< Updated upstream
-  void renderWave() {
-    noStroke();
-    fill(255);
-    for (int x = 0; x < yvalues.length; x++) {
-      ellipse(x*xspacing, yvalues[x], 16, 16);
-    }
-=======
 void renderWave() {
   noStroke();
   fill(255);
   int xBegin = -width/2;
   for (int x = xBegin; x < yvalues.length; x++) {
     ellipse(x*xspacing, yvalues[x], 16, 16);
->>>>>>> Stashed changes
   }
 }
 
-<<<<<<< Updated upstream
-  void renderLine() {
-    stroke(255);
-    strokeWeight(16.0);
-    for (int x = 0; x < yvalues.length; x++) {
-      line(x*xspacing, yvalues[x], x*xspacing, yvalues[x]-x);
-    }
-=======
 void renderLine() {
   stroke(255);
   strokeWeight(16.0);
   int xBegin = -width/2;
   for (int x = xBegin; x < yvalues.length; x++) {
     line(x*xspacing, yvalues[x], x*xspacing, yvalues[x]-x);
->>>>>>> Stashed changes
   }
 }
 void calcApndxWave1() {
