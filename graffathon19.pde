@@ -29,6 +29,16 @@ float[] yvalues;
 int w;
 int xspacing = 16;
 
+//apndx wave helper variables
+int apndx_xspacing = 16;   // How far apart should each horizontal location be spaced
+int apndx_w;              // Width of entire wave
+float apndx_theta = 0.0;  // Start angle at 0
+float apndx_period = 500.0;  // How many pixels before the wave repeats, 500.0 original
+float apndx_dx;  // Value for incrementing X, a function of period and xspacing
+float[] apndx_yvalues;  // Using an array to store height values for the wave
+float ampli = 100.0;  // Height of wave
+//ampli = (float) moonlander.getValue("ampli");
+
 Moonlander moonlander;
 
 /*
@@ -156,3 +166,52 @@ void drawFlower() {
       line(x*xspacing, height/2+yvalues[x], x*xspacing, height/2+yvalues[x]-x);
     }
   }
+  void calcApndxWave1() {
+  // Increment theta (try different values for 'angular velocity' here
+  apndx_w = width+16;
+  apndx_dx = (TWO_PI / apndx_period) * apndx_xspacing;
+  apndx_yvalues = new float[apndx_w/apndx_xspacing];
+  apndx_theta += 0.01; // 0.02 original
+  // For every x value, calculate a y value with sine function
+  float x = apndx_theta;
+  for (int i = 0; i < apndx_yvalues.length; i++) {
+    apndx_yvalues[i] = sin(x)*ampli;
+    x+=apndx_dx;
+  }
+}
+
+void calcApndxWave2() {
+  // Increment theta (try different values for 'angular velocity' here
+  apndx_w = width+16;
+  apndx_dx = (TWO_PI / apndx_period) * apndx_xspacing;
+  apndx_yvalues = new float[apndx_w/apndx_xspacing];
+  apndx_theta += 0.1; // 0.02 original
+
+  // For every x value, calculate a y value with sine function
+  float x = apndx_theta;
+  for (int i = 0; i < apndx_yvalues.length; i++) {
+    apndx_yvalues[i] = sin(2*x)*ampli;
+    x+=apndx_dx;
+  }
+}
+
+void drawApndxWave1() {
+  calcApndxWave1();
+  noStroke();
+  fill(0, 44);
+  // A simple way to draw the wave with an ellipse at each location
+  for (int x = 0; x < apndx_yvalues.length; x++) {
+    rect(x*apndx_xspacing, height/2+apndx_yvalues[x], 15, 5);
+  }
+}
+  
+  void drawApndxWave2() {
+  calcApndxWave2();
+  noStroke();
+  fill(0);
+  // A simple way to draw the wave with an ellipse at each location
+  for (int x = 0; x < apndx_yvalues.length; x++) {
+    rect(x*apndx_xspacing, height/2+apndx_yvalues[x], 5, 15);
+  } 
+}
+  
