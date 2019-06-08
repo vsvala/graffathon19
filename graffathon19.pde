@@ -267,3 +267,34 @@ void drawBezier(int start, int end) {
       bezier(start-(i/2.0), 40+i, 410, 20, 440, 300, end, 300+(i/8.0));
   }
 }
+
+void tree(){
+    translate(width, height*2);
+    stroke(0);
+    line(0,0,0,-120);
+    translate(0,-120);
+    branch(120);
+    theta = radians(map(millis(), 0, 10000, 0, 90));
+    
+}
+
+void branch(float h){
+  h *= 0.66;
+  if(h > 2){
+    pushMatrix();
+    rotate(theta);
+    line(0,0,0,-h);
+    translate(0,-h);
+    branch(h);
+    popMatrix();
+    
+    pushMatrix();
+    rotate(-theta);
+    line(0,0,0,-h);
+    translate(0,-h);
+    branch(h);
+    popMatrix();
+  }
+  
+  
+}
