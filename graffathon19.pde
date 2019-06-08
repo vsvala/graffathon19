@@ -19,6 +19,7 @@ int height = 760;
 int ellipseCounter = 0;
 int flowerCounter = 0;
 int mandalaCounter = 0;
+int treeCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
@@ -78,6 +79,7 @@ void draw() {
     ellipseCounter = 0;
     flowerCounter = 0;
     mandalaCounter = 0;
+    treeCounter = 0;
     if (updatebackground == 1) {
       background(0);
     } else if (updatebackground == -1) {
@@ -281,19 +283,17 @@ void drawBezier(int start, int end) {
 }
 
 void tree(){
-    translate(width/2, height);
     stroke(0);
-    line(0,0,0,-height/3);
-    translate(0,-height/3);
-    branch(height/3);
+    line(0, height ,0,0);
+    branch(height/1.5);
     theta = radians(map(millis(), 0, 10000, 0, 90));
-    
+    treeCounter++;
 }
 
 void branch(float h){
   h *= 0.66;
   if(h > 2){
-    pushMatrix();
+    pushMatrix();   
     rotate(theta);
     line(0,0,0,-h);
     translate(0,-h);
@@ -307,5 +307,4 @@ void branch(float h){
     branch(h);
     popMatrix();
   }
-   
 }
