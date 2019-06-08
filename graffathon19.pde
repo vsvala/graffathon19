@@ -221,3 +221,16 @@ void drawApndxWave2() {
     rect(x*apndx_xspacing, height/2+apndx_yvalues[x], 5, 15);
   }
 }
+
+void drawBezier() {
+  drawCircle();
+  drawLittleCircle();
+  int start = moonlander.getIntValue("start");
+  int end = moonlander.getIntValue("end");
+  background(255);
+  stroke(0);
+   noFill();
+  for (int i = 0; i < 200; i += 20) {
+      bezier(start-(i/2.0), 40+i, 410, 20, 440, 300, end, 300+(i/8.0));
+  }
+}
