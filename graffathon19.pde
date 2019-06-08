@@ -18,7 +18,7 @@ int height = 760;
 
 int ellipseCounter = 0;
 int flowerCounter = 0;
-
+int mandalaCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
@@ -55,7 +55,7 @@ void setup() {
   //set variables for sin wave draw function
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
-  yvalues = new float[w/xspacing];
+  yvalues = new float[w];
   moonlander = Moonlander.initWithSoundtrack(this, "VadodoraChillMix.mp3", 97, 2);
 
   background(255, 255, 255);
@@ -69,12 +69,15 @@ void draw() {
   translate(width/2, height/2);
   scale(height / 1000.0);
 
-  int scene=moonlander.getIntValue("scene");
+  int scene=moonlander.getIntValue("scene"); 
   int updatebackground=moonlander.getIntValue("updatebackground");
   int start = moonlander.getIntValue("start");
   int end = moonlander.getIntValue("end");
   
   if (updatebackground != 0) {
+    ellipseCounter = 0;
+    flowerCounter = 0;
+    mandalaCounter = 0;
     if (updatebackground == 1) {
       background(0);
     } else if (updatebackground == -1) {
@@ -83,6 +86,7 @@ void draw() {
   }
 
   if (scene==0) {  //start/end
+    drawNoisyMountains();
   }
   if (scene==1) {
     drawEllipse();
@@ -96,13 +100,17 @@ void draw() {
   }
   if (scene==4) {
     drawNoisyMountains();
+    drawFlower();
   }
    if (scene==6) {
     drawBezier(start, end);
   }
-  if (scene==98) { // 2019
+  if (scene==7) { // 2019
+    drawMand();
   }
-
+  if (scene==8) { // 2019
+    drawMand();
+  }
   if (scene==100) {  //exit
   }
 }
@@ -114,7 +122,7 @@ void drawEllipse() {
 
   float t = (float) ellipseCounter;    
   ellipse(sin(t/15) * (t/1.5), cos(t/15)*(t/1.5), sin(t/1.5), 100);
-
+  
   ellipseCounter++;
 }
 
@@ -134,7 +142,7 @@ void drawNoisyMountains() {
 void drawFlower() {
   noFill();
   stroke(0, 0, 0, 40);
-  float t=(float) flowerCounter;                 
+  float t=(float) flowerCounter;      
   rotate(t/70);
   ellipse(sin(t/100)*width/2, cos(t/100)*width/2, sin(t/100)*width/2, cos(t/100)*width/2);
   ellipse(sin(t/100)*width/3, cos(t/100)*width/3, sin(t/100)*width/3, cos(t/100)*width/3);
@@ -156,7 +164,7 @@ void calcWave() {
 void renderWave() {
   noStroke();
   fill(255);
-  int xbegin = -width/2;
+  int xbegin = -width;
 
   for (int x = 0; x < yvalues.length; x++) {
     ellipse(xbegin + x * xspacing, yvalues[x], 16, 16);
@@ -232,14 +240,14 @@ void drawApndxWave2() {
    void drawCircle(){ 
    stroke(0,0);
    fill(100, 0,0,1);
-  ellipse(width/2+250, height/2 +50, 150, 150);
+  ellipse(0+250, 0 +50, 150, 150);
 
    }
      
   void drawLittleCircle(){ 
   stroke(0,0);
   fill(100, 0,0,1);
-  ellipse(width/2-350, height/2 -125, 25, 25);
+  ellipse(0-350, 0 -125, 25, 25);
 
    }
   
@@ -247,12 +255,13 @@ void drawApndxWave2() {
   noFill();
   stroke(0,40);
   frameRate(1000);
-  float t=(float)frameCount;
+  float t=(float)mandalaCounter;
   
-  translate(width/2, height/2); 
-   rotate(t/width/2);    
-  line(sin(t/140)*200, cos(t/140)*200, cos(t/10)*300, sin(t/10)*300);
+  // translate(-width/2, -height/2); 
+   rotate(t/-width/2);    
+  line(sin(t/140)*width/3, cos(t/140)*width/3, cos(t/10)*width/1.75, sin(t/10)*width/1.75);
   fill(175);
+  mandalaCounter++;
    }
    
 

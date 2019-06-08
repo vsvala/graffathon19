@@ -2,10 +2,17 @@
 	<tracks>
 		<track name="scene">
 			<key value="0" row="0" interpolation="0"/>
-			<key value="1" row="16" interpolation="0"/>
+			<key value="4" row="16" interpolation="0"/>
 			<key value="3" row="64" interpolation="0"/>
-			<key value="2" row="136" interpolation="0"/>
-			<key value="4" row="176" interpolation="0"/>
+			<key value="2" row="152" interpolation="0"/>
+			<key value="4" row="169" interpolation="0"/>
+		</track>
+		<track name="updatebackground">
+			<key value="-1" row="0" interpolation="0"/>
+			<key value="0" row="1" interpolation="0"/>
+			<key value="0" row="152" interpolation="0"/>
+			<key value="0" row="167" interpolation="0"/>
+			<key value="0" row="169" interpolation="0"/>
 		</track>
 	</tracks>
 	<bookmarks/>
