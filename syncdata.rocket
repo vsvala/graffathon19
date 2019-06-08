@@ -1,11 +1,27 @@
 <sync rows="700">
 	<tracks>
 		<track name="scene">
-			<key value="0" row="0" interpolation="0"/>
-			<key value="1" row="16" interpolation="0"/>
-			<key value="3" row="64" interpolation="0"/>
-			<key value="2" row="136" interpolation="0"/>
-			<key value="4" row="176" interpolation="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="16" value="1" interpolation="0"/>
+			<key row="64" value="3" interpolation="0"/>
+			<key row="136" value="2" interpolation="0"/>
+			<key row="176" value="4" interpolation="0"/>
+			<key row="560" value="6" interpolation="0"/>
+		</track>
+		<track name="updatebackground"/>
+		<track name="start">
+			<key row="560" value="0" interpolation="0"/>
+			<key row="568" value="200" interpolation="0"/>
+			<key row="576" value="250" interpolation="0"/>
+			<key row="584" value="300" interpolation="0"/>
+			<key row="592" value="600" interpolation="0"/>
+		</track>
+		<track name="end">
+			<key row="560" value="100" interpolation="0"/>
+			<key row="568" value="150" interpolation="0"/>
+			<key row="576" value="50" interpolation="0"/>
+			<key row="584" value="100" interpolation="0"/>
+			<key row="592" value="200" interpolation="0"/>
 		</track>
 	</tracks>
 	<bookmarks/>
