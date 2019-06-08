@@ -106,10 +106,13 @@ void draw() {
     drawBezier(start, end);
   }
   if (scene==7) { // 2019
+  
+  }
+  if (scene==8) {
     drawMand();
   }
-  if (scene==8) { // 2019
-    drawMand();
+  if (scene==98) { // 2019
+
   }
   if (scene==100) {  //exit
   }
@@ -240,14 +243,14 @@ void drawApndxWave2() {
    void drawCircle(){ 
    stroke(0,0);
    fill(100, 0,0,1);
-  ellipse(0+250, 0 +50, 150, 150);
+  ellipse(width/2*0.8, -height/2 * 0.5, width/6, width/6);
 
    }
      
   void drawLittleCircle(){ 
   stroke(0,0);
   fill(100, 0,0,1);
-  ellipse(0-350, 0 -125, 25, 25);
+  ellipse(-width/2*0.9, -height/2 * 0.3, width/22, width/22);
 
    }
   
@@ -304,6 +307,5 @@ void branch(float h){
     branch(h);
     popMatrix();
   }
-  
-  
+   
 }
