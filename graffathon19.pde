@@ -243,7 +243,7 @@ void drawApndxWave2() {
    void drawCircle(){ 
    stroke(0,0);
    fill(100, 0,0,1);
-  ellipse(width/2*0.8, -height/2 * 0.5, width/6, width/6);
+  ellipse(width/2*0.90, -height/2 * 0.5, width/6, width/6);
 
    }
      
