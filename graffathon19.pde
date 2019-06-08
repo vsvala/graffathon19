@@ -69,8 +69,8 @@ void draw() {
   translate(width/2, height/2);
   scale(height / 1000.0);
 
-  int scene=moonlander.getIntValue("scene"); 
-  int updatebackground=moonlander.getIntValue("updatebackground");
+  int scene = moonlander.getIntValue("scene"); 
+  int updatebackground = moonlander.getIntValue("updatebackground");
   int start = moonlander.getIntValue("start");
   int end = moonlander.getIntValue("end");
   
@@ -106,7 +106,7 @@ void draw() {
     drawBezier(start, end);
   }
   if (scene==7) { // 2019
-  
+    tree();
   }
   if (scene==8) {
     drawMand();
