@@ -12,10 +12,6 @@ import moonlander.library.*;
 // full HD resolution (1920x1080).
 
 
-int width = 1280;
-int height = 760;
-
-
 int ellipseCounter = 0;
 int flowerCounter = 0;
 int mandalaCounter = 0;
@@ -23,7 +19,7 @@ int treeCounter = 0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
-float amplitude = height*0.85;
+float amplitude = height*2;
 float period = 500.0;
 float dx;
 float[] yvalues;
@@ -47,13 +43,16 @@ Moonlander moonlander;
  */
 void settings() {
   // Set up the drawing area size and renderer (P2D / P3D).
-  size(1980, 1080, P2D);
+  // size(1980/2, 1080/2, P2D);
+  fullScreen(P2D);
 }
 
 void setup() {
   noCursor();
   frameRate(60);
   //set variables for sin wave draw function
+  translate(width/2, height/2);
+  scale(height / 1000.0);
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
@@ -144,10 +143,10 @@ void drawNoisyMountains() {
 
   noiseDetail(10, 0.45);
   for (float x = -width; x < width; x = x + 1) {
-    float noiseValue = noise(x/500, time);
-    float y = map(noiseValue, 0, 1, 0, -height);
-    rect(x, y, 1, -height);
-    rect(-x, -y, 1, height);
+    float noiseValue = noise(x/(height/3), time);
+    float y = map(noiseValue, 0, 1, 0, -height/2);
+    rect(x, y, 1, -height/2);
+    rect(-x, -y, 1, height/2);
   }
 }
 
