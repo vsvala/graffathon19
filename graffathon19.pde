@@ -313,3 +313,37 @@ void branch(float h){
     popMatrix();
   }
 }
+ 
+ void drawtext(){
+  textSize(32);
+  textAlign(CENTER);
+  drawType(width * 0.5); 
+}
+
+void drawType(float x) {
+
+  fill(100);
+  text("MUSIC CREDITS:", x, height/4);
+  fill(175);
+  text("Vadora Chill Mix, Kevin MacLeod", x, height/3);
+  fill(200);
+  text("(incompetech.com), Licensed under Creative Commons: By Attribution 3.0 License", x, height/2.2);
+  fill(200);
+  text("http://creativecommons.org/licenses/by/3.0/", x, height/1.9);
+  
+
+}
+ 
+void drawendtext(){
+  textAlign(CENTER); 
+  textSize(32);
+  fill(100);
+  text("GRAFFATHON 2018:", width/2, 350); 
+  fill(255);
+  text("by vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", width/2, 450);
+
+ } 
+
+void drawexit(){
+exit();
+}
