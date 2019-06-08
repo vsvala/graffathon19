@@ -88,3 +88,14 @@ void drawEllipse() {
   ellipse(sin(t/15)*(t/2.5), cos(t/15)*(t/2.5), sin(t/3), 100);
   scale(C_HEIGHT / 1000.0);
 }
+
+// this could be used on background
+void drawNoisyMountains() {
+     float time = millis() * 0.0001;
+     
+    noiseDetail(10, 0.45);
+      for (float x = 0; x < width; x = x + 1) {
+    float noiseValue = noise(x/500, time);
+    float y = map(noiseValue, 0, 1, 0, height);
+    rect(x, y, 1, height);
+  }
