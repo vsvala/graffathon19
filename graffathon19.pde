@@ -132,6 +132,11 @@ void draw() {
   if (scene==98) { // 2019
       drawMusicCredits(0, 48);
   }
+  
+   if (scene==99) { // 2019
+      drawBezier (start,end);
+      drawMathematicalCredits(0, 48);
+  }
   if (scene==100) {  //exit
     drawEndText(0 , 48);
   }
@@ -392,4 +397,12 @@ void drawFlowerWithPulse(boolean changeColor) {
  
  
   flowerCounter++;
+}
+
+void drawMathematicalCredits(float x, int fontSize) {
+  textFont(font);
+  textSize(fontSize);
+  textAlign(CENTER);
+  fill(100);
+  text("CREDITS FOR MATHEMATICAL FUNCTIONS", x, -height/10);
 }
