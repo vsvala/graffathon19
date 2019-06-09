@@ -98,7 +98,7 @@ void draw() {
     renderWave();
   }
   if (scene==3) {
-    drawFlower(true);
+   drawFlowerWithPulse(false)
   }
   if (scene==4) {
     drawNoisyMountains();
@@ -350,3 +350,41 @@ void drawEndText(float x, int fontSize){
   fill(175);
   text("Team vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", x, 0);
  } 
+ void draw() {
+  
+  translate(width/2, height/2);
+  scale(height / 1000.0);
+
+  drawFlowerWithPulse(false); 
+   //  drawpulse();
+
+}
+  
+ ///LAST FLOWER SCENE
+ 
+void drawFlowerWithPulse(boolean changeColor) {
+  noFill();
+  if (changeColor == true) {
+    stroke(map(flowerCounter, 0, 500, 0, 75), 0, 0, 40);
+  } else {
+    stroke(0, 0, 0, 40);
+  }
+  
+  float t=(float) flowerCounter;      
+  rotate(t/70);
+  ellipse(sin(t/100)*width/100, cos(t/100)*width/100, sin(t/100)*width/2, cos(t/100)*width/2);
+  ellipse(sin(t/100)*width/3, cos(t/100)*width/3, sin(t/100)*width/3, cos(t/100)*width/3);
+  ellipse(sin(t/100)*width/5, cos(t/100)*width/5, sin(t/100)*width/5, cos(t/100)*width/5);
+
+  a = a + 0.04;
+  s = cos(a)*5;
+  
+  scale(s);
+  fill(100, 0,0,20);
+  ellipse(0, 0, 25, 25); 
+  fill(100, 0,0,50);
+  line(300, 110, 25, 25); 
+ 
+ 
+  flowerCounter++;
+}
