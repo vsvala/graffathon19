@@ -70,7 +70,6 @@ void setup() {
 
   background(255, 255, 255);
   moonlander.start();
-  
 }
 
 
@@ -110,6 +109,9 @@ void draw() {
   }
   if (scene==3) {
    drawFlowerWithPulse(false);
+  }
+  if (scene==33) {
+    drawFlower(true);  
   }
   if (scene==4) {
     drawNoisyMountains();

@@ -3,14 +3,14 @@
 		<track name="scene">
 			<key value="0" interpolation="0" row="0"/>
 			<key value="4" interpolation="0" row="17"/>
-			<key value="3" interpolation="0" row="64"/>
+			<key value="3.5" interpolation="0" row="64"/>
 			<key value="2" interpolation="0" row="96"/>
 			<key value="7" interpolation="0" row="120"/>
 			<key value="8" interpolation="0" row="168"/>
 			<key value="3" interpolation="0" row="240"/>
 			<key value="98" interpolation="0" row="320"/>
-			<key value="100" interpolation="0" row="328"/>
-			<key value="666" interpolation="0" row="344"/>
+			<key value="100" interpolation="0" row="346"/>
+			<key value="666" interpolation="0" row="368"/>
 		</track>
 		<track name="updatebackground">
 			<key value="-1" interpolation="0" row="0"/>
@@ -23,6 +23,9 @@
 			<key value="-1" interpolation="0" row="240"/>
 			<key value="0" interpolation="0" row="241"/>
 			<key value="-1" interpolation="0" row="319"/>
+			<key value="1" interpolation="0" row="343"/>
+			<key value="1" interpolation="0" row="345"/>
+			<key value="-1" interpolation="0" row="346"/>
 		</track>
 		<track name="time">
 			<key value="0" interpolation="2" row="0"/>
