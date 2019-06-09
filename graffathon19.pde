@@ -124,6 +124,7 @@ void draw() {
     drawMand();
   }
   if (scene==8) {
+    drawTreeBackground();
     tree();
   }
   if (scene==9) {
@@ -420,6 +421,7 @@ void drawFlowerWithFlower(boolean changeColor) {
     stroke(0, 0, 0, 40);
   }
   
+  
   float t=(float) flowerCounter;      
   rotate(t/27);
   ellipse(sin(t/100)*width/100, cos(t/100)*width/100, sin(t/100)*width/2, cos(t/100)*width/2);
@@ -433,4 +435,15 @@ void drawFlowerWithFlower(boolean changeColor) {
   ellipse(0, 0, 50, 50); 
   
   flowerCounter++;
+}
+
+drawTreeBackground(){
+pushMatrix();
+   float circleCounter = moonlander.getValue();
+   stroke(0,0);
+   fill(100, 0, 0, 30);
+   float size = map(circleCounter, 0, 1000, 25, 500);
+   float yPosition = map(circleCounter, 0, 3000, height/2, -height/2);
+   ellipse(0, yPosition, size, size);
+   popMatrix();
 }
