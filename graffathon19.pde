@@ -393,3 +393,30 @@ void drawFlowerWithPulse(boolean changeColor) {
  
   flowerCounter++;
 }
+
+
+// secondscene FLOWER with FLOWER
+
+void drawFlowerWithFlower(boolean changeColor) {
+  noFill();
+  if (changeColor == true) {
+    stroke(map(flowerCounter, 0, 500, 0, 75), 0, 0, 40);
+  } else {
+    stroke(0, 0, 0, 40);
+  }
+  
+  float t=(float) flowerCounter;      
+  rotate(t/27);
+  ellipse(sin(t/100)*width/100, cos(t/100)*width/100, sin(t/100)*width/2, cos(t/100)*width/2);
+  ellipse(sin(t/100)*width/3, cos(t/100)*width/3, sin(t/100)*width/3, cos(t/100)*width/3);
+  ellipse(sin(t/100)*width/5, cos(t/100)*width/5, sin(t/100)*width/5, cos(t/100)*width/5);
+  a = a + 0.04;
+  s = cos(a)*10;
+
+  scale(s); 
+  fill(100, 0,0,1);
+  ellipse(0, 0, 50, 50); 
+  
+  flowerCounter++;
+}
+
