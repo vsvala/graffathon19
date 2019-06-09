@@ -38,6 +38,8 @@ float[] apndx_yvalues;  // Using an array to store height values for the wave
 float ampli = 100.0;  // Height of wave
 
 Moonlander moonlander;
+PFont font; 
+
 
 /*
  * settings() must be used when calling size with variable height and width
@@ -58,6 +60,7 @@ void setup() {
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
+  font = createFont("NanumBrushScriptRegular.ttf", 64);
  
  //for new flowerWithPulse
   float a = 0.0;
@@ -331,6 +334,7 @@ void branch(float h){
 }
 
 void drawTitle(float x, int fontSize){
+  textFont(font);
   textAlign(CENTER); 
   textSize(fontSize);
   fill(100);
@@ -338,6 +342,7 @@ void drawTitle(float x, int fontSize){
 }
 
 void drawMusicCredits(float x, int fontSize) {
+  textFont(font);
   textSize(fontSize);
   textAlign(CENTER);
   fill(100);
@@ -351,6 +356,7 @@ void drawMusicCredits(float x, int fontSize) {
 }
  
 void drawEndText(float x, int fontSize){
+  textFont(font);
   textAlign(CENTER); 
   textSize(fontSize);
   fill(100);
