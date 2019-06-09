@@ -16,6 +16,8 @@ int ellipseCounter = 0;
 int flowerCounter = 0;
 int mandalaCounter = 0;
 int treeCounter = 0;
+float a = 0.0;
+float s = 0.0;
 
 //sin wave draw function helper variables
 float theta = 0.0;
@@ -56,10 +58,16 @@ void setup() {
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
+ 
+ //for new flowerWithPulse
+  float a = 0.0;
+  float s = 0.0;
+  
   moonlander = Moonlander.initWithSoundtrack(this, "VadodoraChillMix.mp3", 97, 2);
 
   background(255, 255, 255);
   moonlander.start();
+  
 }
 
 
