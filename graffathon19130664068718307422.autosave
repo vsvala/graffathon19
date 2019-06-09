@@ -60,7 +60,7 @@ void setup() {
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
-  font = createFont("KaushanScript-Regular.ttf", 64);
+  font = createFont("NanumBrushScript-Regular.ttf", 64);
  
  //for new flowerWithPulse
   float a = 0.0;
@@ -111,7 +111,7 @@ void draw() {
    drawFlowerWithPulse(false);
   }
   if (scene==33) {
-    drawFlower(true);
+    drawFlower(true);  
   }
   if (scene==4) {
     drawNoisyMountains();
@@ -124,7 +124,6 @@ void draw() {
     drawMand();
   }
   if (scene==8) {
-    drawTreeBackground();
     tree();
   }
   if (scene==9) {
@@ -269,7 +268,6 @@ void drawApndxWave2() {
   void drawMand(){
     drawCircle();
     drawLittleCircle();
-    drawParamCirc();
     drawMandala1();
    }
 
@@ -280,21 +278,10 @@ void drawApndxWave2() {
 
    }
      
-     
   void drawLittleCircle(){ 
   stroke(0,0);
   fill(100, 0,0,1);
   ellipse(-width/3*0.9, -height/3 * 0.3, width/33, width/33);
-
-   }
-   
-  void drawParamCirc(){ 
-   stroke(0,0);
-   fill(100, 0,0,1);
-    ellipse((float) (width/3*moonlander.getValue("C_x")), 
-      (float) (-height/3 * moonlander.getValue("C_y")),
-      width/12 * (float) moonlander.getValue("C_size"),
-      width/12 * (float) moonlander.getValue("C_size"));
 
    }
   
@@ -361,7 +348,6 @@ void drawTitle(float x, int fontSize){
 }
 
 void drawMusicCredits(float x, int fontSize) {
-  
   textFont(font);
   textSize(fontSize);
   textAlign(CENTER);
@@ -373,7 +359,6 @@ void drawMusicCredits(float x, int fontSize) {
   text("(incompetech.com), Licensed under Creative Commons: By Attribution 3.0 License", x, height/10);
   fill(200);
   text("http://creativecommons.org/licenses/by/3.0/", x, height/6);
-  drawParamCirc();
 }
  
 void drawEndText(float x, int fontSize){
@@ -384,7 +369,6 @@ void drawEndText(float x, int fontSize){
   text("GRAFFATHON 2019", x, -height/10); 
   fill(175);
   text("Team vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", x, 0);
-  drawParamCirc();
  } 
   
  ///LAST FLOWER SCENE
@@ -435,7 +419,6 @@ void drawFlowerWithFlower(boolean changeColor) {
     stroke(0, 0, 0, 40);
   }
   
-  
   float t=(float) flowerCounter;      
   rotate(t/27);
   ellipse(sin(t/100)*width/100, cos(t/100)*width/100, sin(t/100)*width/2, cos(t/100)*width/2);
@@ -449,15 +432,4 @@ void drawFlowerWithFlower(boolean changeColor) {
   ellipse(0, 0, 50, 50); 
   
   flowerCounter++;
-}
-
-void drawTreeBackground(){
-pushMatrix();
-   float circleCounter = (float) moonlander.getValue("circleCounter");
-   stroke(0,0);
-   fill(100, 0, 0, 30);
-   float size = map(circleCounter, 0, 1000, 25, 500);
-   float yPosition = map(circleCounter, 0, 3000, height/2, -height/2);
-   ellipse(0, yPosition, size, size);
-   popMatrix();
 }
