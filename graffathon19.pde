@@ -60,7 +60,7 @@ void setup() {
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
-  font = createFont("NanumBrushScriptRegular.ttf", 64);
+  font = createFont("NanumBrushScript-Regular.ttf", 64);
  
  //for new flowerWithPulse
   float a = 0.0;
@@ -109,7 +109,7 @@ void draw() {
     renderWave();
   }
   if (scene==3) {
-   drawFlowerWithPulse(false)
+   drawFlowerWithPulse(false);
   }
   if (scene==4) {
     drawNoisyMountains();
@@ -130,10 +130,10 @@ void draw() {
   }
 
   if (scene==98) { // 2019
-      drawMusicCredits(0, 32);
+      drawMusicCredits(0, 48);
   }
   if (scene==100) {  //exit
-    drawEndText(0 , 32);
+    drawEndText(0 , 48);
   }
   if (scene==666) {
     exit();
@@ -364,15 +364,6 @@ void drawEndText(float x, int fontSize){
   fill(175);
   text("Team vaDOD: Ava Heinonen, Heli Huhtilainen, Harri Mehtälä & Virva Svala ", x, 0);
  } 
- void draw() {
-  
-  translate(width/2, height/2);
-  scale(height / 1000.0);
-
-  drawFlowerWithPulse(false); 
-   //  drawpulse();
-
-}
   
  ///LAST FLOWER SCENE
  
