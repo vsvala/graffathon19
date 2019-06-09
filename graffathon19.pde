@@ -60,7 +60,7 @@ void setup() {
   w = width + 16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new float[w];
-  font = createFont("NanumBrushScript-Regular.ttf", 64);
+  font = createFont("KaushanScript-Regular.ttf", 64);
  
  //for new flowerWithPulse
   float a = 0.0;
