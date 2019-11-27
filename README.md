@@ -1,6 +1,6 @@
 # graffathon19
 
-Summer 2019 Graffathon's demoscene Mandaloid. [Link to youtube play](https://www.youtube.com/watch?v=DtdiKrVm8mo&list=PLmRDkQf8W1WE_jGbvn8m1AbZleg53oZdw&index=2)
+Summer 2019 Graffathon's demoscene Mandaloid. [Link to youtube play](https://www.youtube.com/watch?v=SxgrOZ1aThY&list=PLmRDkQf8W1WE_jGbvn8m1AbZleg53oZdw&index=2)
 
 Voted second best at Beginner's combo.
 
